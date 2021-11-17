@@ -55,12 +55,28 @@ const EditorToolbar = () => {
       component: <ContentCopyIcon />,
     },
     {
+      title: 'Cut',
+      component: <ContentCutIcon />,
+    },
+    {
+      title: 'Paste',
+      component: <ContentPasteIcon />,
+    },
+    {
       title: 'Undo',
       component: <UndoIcon />,
     },
     {
       title: 'Redo',
       component: <RedoIcon />,
+    },
+    {
+      title: 'Text Color',
+      component: <FormatColorTextIcon />,
+    },
+    {
+      title: 'Fill Color',
+      component: <FormatColorFillIcon />,
     },
     {
       title: 'Bold',
@@ -126,26 +142,12 @@ const EditorToolbar = () => {
       title: 'Image',
       component: <ImageIcon />,
     },
-    {
-      title: 'Text Color',
-      component: <FormatColorTextIcon />,
-    },
-    {
-      title: 'Fill Color',
-      component: <FormatColorFillIcon />,
-    },
-    {
-      title: 'Paste',
-      component: <ContentPasteIcon />,
-    },
+
     {
       title: 'Table',
       component: <TableChartIcon />,
     },
-    {
-      title: 'Cut',
-      component: <ContentCutIcon />,
-    },
+
     {
       title: 'Font Size',
       component: <FormatSizeIcon />,
