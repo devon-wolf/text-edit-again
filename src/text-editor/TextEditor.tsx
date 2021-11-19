@@ -4,9 +4,7 @@ import React from 'react';
 import EditorToolbar from './EditorToolbar';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface TextEditorProps {
-
-}
+export interface TextEditorProps {}
 
 const TextEditor = () => {
   return (
