@@ -26,7 +26,7 @@ import ContentCutIcon from '@mui/icons-material/ContentCut';
 import SaveIcon from '@mui/icons-material/Save';
 import UndoIcon from '@mui/icons-material/Undo';
 import RedoIcon from '@mui/icons-material/Redo';
-import { IconButton, Tooltip } from '@mui/material';
+import { Divider, IconButton, Tooltip } from '@mui/material';
 
 export interface TooltipIconProps {
   title: string;
@@ -44,11 +44,17 @@ export const TooltipIcon = ({
   </Tooltip>
 );
 
-export const ToolbarIcons: TooltipIconProps[] = [
+const divider = {
+  title: 'divider',
+  component: <Divider flexItem orientation="vertical" variant="middle" sx={{ marginLeft: '.25rem', marginRight: '.25rem'}} />
+};
+
+export const ToolbarIcons: Array<TooltipIconProps> = [
   {
     title: 'Save',
     component: <SaveIcon />,
   },
+  divider,
   {
     title: 'Copy',
     component: <ContentCopyIcon />,
@@ -61,6 +67,7 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Paste',
     component: <ContentPasteIcon />,
   },
+  divider,
   {
     title: 'Undo',
     component: <UndoIcon />,
@@ -69,6 +76,7 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Redo',
     component: <RedoIcon />,
   },
+  divider,
   {
     title: 'Text Color',
     component: <FormatColorTextIcon />,
@@ -77,6 +85,12 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Fill Color',
     component: <FormatColorFillIcon />,
   },
+  divider,
+  {
+    title: 'Font Size',
+    component: <FormatSizeIcon />,
+  },
+  divider,
   {
     title: 'Bold',
     component: <FormatBoldIcon />,
@@ -105,6 +119,7 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Code',
     component: <CodeIcon />,
   },
+  divider,
   {
     title: 'Align Left',
     component: <FormatAlignLeftIcon />,
@@ -121,6 +136,7 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Justify',
     component: <FormatAlignJustifyIcon />,
   },
+  divider,
   {
     title: 'Bulleted List',
     component: <FormatListBulletedIcon />,
@@ -129,6 +145,7 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Numbered List',
     component: <FormatListNumberedIcon />,
   },
+  divider,
   {
     title: 'Decrease Indent',
     component: <FormatIndentDecreaseIcon />,
@@ -137,20 +154,17 @@ export const ToolbarIcons: TooltipIconProps[] = [
     title: 'Increase Indent',
     component: <FormatIndentIncreaseIcon />,
   },
+  divider,
   {
     title: 'Image',
     component: <ImageIcon />,
   },
-
+  divider,
   {
     title: 'Table',
     component: <TableChartIcon />,
   },
-
-  {
-    title: 'Font Size',
-    component: <FormatSizeIcon />,
-  },
+  divider,
   {
     title: 'Clear All Formatting',
     component: <FormatClearIcon />,

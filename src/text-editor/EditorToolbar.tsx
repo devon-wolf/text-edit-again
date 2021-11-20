@@ -7,10 +7,17 @@ export interface EditorToolbarProps {}
 
 const EditorToolbar = () => {
   return (
-    <Toolbar>
-      {ToolbarIcons.map((icon) => (
-        <TooltipIcon {...icon} key={icon.title} />
-      ))}
+    <Toolbar
+      sx={{
+        borderRadius: 'inherit',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      {ToolbarIcons.map((icon) => {
+        if (icon.title === 'divider') return icon.component;
+        return <TooltipIcon {...icon} key={icon.title} />;
+      })}
     </Toolbar>
   );
 };

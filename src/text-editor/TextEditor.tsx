@@ -1,4 +1,4 @@
-import { Paper } from '@mui/material';
+import { Divider, Paper, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import EditorToolbar from './EditorToolbar';
@@ -9,8 +9,12 @@ export interface TextEditorProps {}
 const TextEditor = () => {
   return (
     <Box>
-      <EditorToolbar />
-      <Paper sx={{ height: '300px', backgroundColor: 'dimgray' }}></Paper>
+      <Paper sx={{ height: '600px', backgroundColor: 'ivory' }}>
+        <EditorToolbar />
+        <Divider variant="middle">
+          <Typography variant="button">Document</Typography>
+        </Divider>
+      </Paper>
     </Box>
   );
 };
